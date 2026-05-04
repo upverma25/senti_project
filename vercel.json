@@ -1,37 +1,16 @@
 {
-  "version": 2,
-  "builds": [
+  "projects": [
     {
-      "src": "backend/index.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "50mb",
-        "runtime": "python3.11"
-      }
-    },
-    {
-      "src": "frontend/package.json",
+      "src": "frontend",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "frontend/dist"
+        "distDir": "dist"
       }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "backend/index.py"
     },
     {
-      "src": "/health",
-      "dest": "backend/index.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "frontend/dist/$1"
+      "src": "backend",
+      "use": "@vercel/python"
     }
-  ],
-  "env": {
-    "PYTHONPATH": "backend"
-  }
+  ]
 }
+        "distDir": "frontend/dist"

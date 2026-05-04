@@ -7,9 +7,9 @@
       "config": {
         "maxLambdaSize": "50mb",
         "runtime": "python3.11"
+      {
+        "framework": "vite"
       }
-    },
-    {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
