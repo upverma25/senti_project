@@ -13,7 +13,7 @@ type Tab = 'history' | 'chart'
 export default function App() {
   const { result, loading, error, history, stats, analyze, clearHistory } = useSentiment()
   const [activeTab, setActiveTab] = useState<Tab>('history')
-  const [text, setText] = useState('')
+  const [, setText] = useState('')
 
   const handleAnalyze = (t: string) => {
     setText(t)
